@@ -41,12 +41,12 @@
         <c:forEach var="tempEmployee" items="${EMPLOYEE_LIST}">
 
             <tr>
-                <td> ${tempEmployee.ID} </td>
-                <td> ${tempEmployee.FullName} </td>
-                <td> ${tempEmployee.Birthday} </td>
-                <td> ${tempEmployee.Address} </td>
-                <td> ${tempEmployee.Position} </td>
-                <td> ${tempEmployee.Department} </td>
+                <td> ${tempEmployee.id} </td>
+                <td> ${tempEmployee.fullName} </td>
+                <td> ${tempEmployee.birthday} </td>
+                <td> ${tempEmployee.address} </td>
+                <td> ${tempEmployee.position} </td>
+                <td> ${tempEmployee.department} </td>
             </tr>
 
         </c:forEach>
