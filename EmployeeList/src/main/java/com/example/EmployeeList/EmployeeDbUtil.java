@@ -26,7 +26,7 @@ public class EmployeeDbUtil {
         try {
             myConn = dataSource.getConnection();
 
-            String sql = "select * from employee order by FullName";
+            String sql = "select * from employee order by ID";
 
             myStmt = myConn.createStatement();
 
@@ -97,48 +97,6 @@ public class EmployeeDbUtil {
         }
         finally {
             close(myConn, myStmt, null);
-        }
-    }
-
-    public Employee getEmployee(String theEmployeeId) throws Exception {
-
-        Employee theEmployee = null;
-
-        Connection myConn = null;
-        PreparedStatement myStmt = null;
-        ResultSet myRs = null;
-        int ID;
-
-        try {
-            ID = Integer.parseInt(theEmployeeId);
-
-            myConn = dataSource.getConnection();
-
-            String sql = "select * from employee where ID=?";
-
-            myStmt = myConn.prepareStatement(sql);
-
-            myStmt.setInt(1, ID);
-
-            myRs = myStmt.executeQuery();
-
-            if (myRs.next()) {
-                String FullName = myRs.getString("FullName");
-                String Birthday = myRs.getString("Birthday");
-                String Address = myRs.getString("Address");
-                String Position = myRs.getString("Position");
-                String Department = myRs.getString("Department");
-
-                theEmployee = new Employee(ID, FullName, Birthday, Address, Position, Department);
-            }
-            else {
-                throw new Exception("Could not find student id: " + ID);
-            }
-
-            return theEmployee;
-        }
-        finally {
-            close(myConn, myStmt, myRs);
         }
     }
 }

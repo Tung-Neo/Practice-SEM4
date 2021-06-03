@@ -5,10 +5,10 @@
   Time: 4:01 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Employee</title>
+    <title>Add Employee</title>
 </head>
 <body>
 <div id="container">
@@ -22,27 +22,27 @@
             <tbody>
             <tr>
                 <td><label>Full Name:</label></td>
-                <td><input type="text" name="fullname" /></td>
+                <td><input type="text" name="FullName" /></td>
             </tr>
 
             <tr>
                 <td><label>Birthday:</label></td>
-                <td><input type="text" name="birthday" /></td>
+                <td><input type="text" name="Birthday" /></td>
             </tr>
 
             <tr>
                 <td><label>Address:</label></td>
-                <td><input type="text" name="address" /></td>
+                <td><input type="text" name="Address" /></td>
             </tr>
 
             <tr>
                 <td><label>Position:</label></td>
-                <td><input type="text" name="position" /></td>
+                <td><input type="text" name="Position" /></td>
             </tr>
 
             <tr>
                 <td><label>Department:</label></td>
-                <td><input type="text" name="department" /></td>
+                <td><input type="text" name="Department" /></td>
             </tr>
 
             <tr>

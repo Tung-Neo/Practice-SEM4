@@ -9,11 +9,11 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "EmployeeControllerServlet", value = "/EmployeeControllerServlet")
 public class EmployeeControllerServlet extends HttpServlet {
+
     private EmployeeDbUtil employeeDbUtil;
     private DataSource dataSource;
 
@@ -37,6 +37,7 @@ public class EmployeeControllerServlet extends HttpServlet {
         }
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         try {
@@ -61,6 +62,10 @@ public class EmployeeControllerServlet extends HttpServlet {
 
     }
 
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
 
     private void addEmployee(HttpServletRequest request, HttpServletResponse response) throws Exception {
 

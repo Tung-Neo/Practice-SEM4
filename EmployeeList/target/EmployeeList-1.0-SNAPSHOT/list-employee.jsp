@@ -28,7 +28,7 @@
 
     <table>
 
-        <tr>
+        <tr style="border: solid 1px">
             <th>ID</th>
             <th>Full Name</th>
             <th>Birthday</th>
