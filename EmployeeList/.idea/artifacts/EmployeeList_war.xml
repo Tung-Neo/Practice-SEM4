@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="EmployeeList:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>EmployeeList</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="EmployeeList-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="EmployeeList:war exploded" />
+    </root>
+  </artifact>
+</component>
